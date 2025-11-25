@@ -7,7 +7,11 @@ apply plugin: 'com.google.dagger.hilt.android'
 android {
     namespace 'com.example.loginsample.feature.login'
     compileSdkVersion 34
-    defaultConfig { minSdkVersion 24; targetSdkVersion 34 }
+    defaultConfig {
+        minSdkVersion 24
+        targetSdkVersion 34
+        buildConfigField "String", "REDIRECT_URI", "\"myapp://oauth2redirect\""
+    }
     compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
     kotlinOptions { jvmTarget = '17' }
 }
