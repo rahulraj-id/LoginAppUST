@@ -4,7 +4,6 @@ import android.content.Context
 import com.example.loginsample.data.local.DeviceDbHelper
 import com.example.loginsample.data.local.Prefs
 import com.example.loginsample.data.network.HttpClient
-import com.example.loginsample.data.oauth.OAuthManager
 import com.example.loginsample.data.repository.AuthRepositoryImpl
 import com.example.loginsample.data.repository.DeviceRepositoryImpl
 import com.example.loginsample.data.util.NetworkUtil
@@ -31,13 +30,4 @@ object ProvidersModule {
     @Provides @Singleton fun providePrefs(context: Context): Prefs = Prefs(context)
     @Provides @Singleton fun provideDb(context: Context): DeviceDbHelper = DeviceDbHelper(context)
     @Provides @Singleton fun provideNetworkUtil(context: Context, client: HttpClient): NetworkUtil = NetworkUtil(context, client)
-    @Provides @Singleton fun provideOAuthManager(context: Context, client: HttpClient): OAuthManager = OAuthManager(
-        context,
-        context.getString(com.example.loginsample.R.string.auth_url),
-        context.getString(com.example.loginsample.R.string.token_url),
-        context.getString(com.example.loginsample.R.string.client_id),
-        context.getString(com.example.loginsample.R.string.redirect_uri),
-        context.getString(com.example.loginsample.R.string.scope),
-        client
-    )
 }
