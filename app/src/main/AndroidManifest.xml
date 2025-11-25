@@ -10,7 +10,7 @@
         android:label="LoginSample"
         android:theme="@style/Theme.LoginSample">
 
-        <activity android:name=".presentation.auth.RedirectUriReceiverActivity">
+        <activity android:name=".presentation.auth.RedirectUriReceiverActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -22,7 +22,7 @@
         <activity android:name=".presentation.detail.DeviceDetailActivity" />
         <activity android:name=".presentation.home.HomeActivity" />
         <activity android:name=".presentation.auth.LoginActivity" />
-        <activity android:name=".presentation.auth.SplashActivity">
+        <activity android:name=".presentation.auth.SplashActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
