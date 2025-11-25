@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LoginSample</string>
+    <string name="auth_base_url">https://example.com</string>
+    <string name="auth_url">https://example.com/authorize</string>
+    <string name="token_url">https://example.com/token</string>
+    <string name="client_id">client_id_here</string>
+    <string name="redirect_uri">myapp://oauth2redirect</string>
+    <string name="scope">openid profile</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="home_title">Discovery</string>
+    <string name="no_devices">No devices</string>
+    <string name="public_ip">Public IP</string>
+    <string name="ip_details">IP Details</string>
+</resources>
