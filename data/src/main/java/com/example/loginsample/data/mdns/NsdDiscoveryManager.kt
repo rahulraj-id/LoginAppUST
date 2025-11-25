@@ -1,12 +1,13 @@
 package com.example.loginsample.data.mdns
 
 import android.content.Context
+import dagger.hilt.android.qualifiers.ApplicationContext
 import android.net.wifi.WifiManager
 import android.net.nsd.NsdManager
 import android.net.nsd.NsdServiceInfo
 import javax.inject.Inject
 
-class NsdDiscoveryManager @Inject constructor(context: Context) {
+class NsdDiscoveryManager @Inject constructor(@ApplicationContext context: Context) {
     private val nsdManager = context.getSystemService(Context.NSD_SERVICE) as NsdManager
     private val wifi = context.applicationContext.getSystemService(Context.WIFI_SERVICE) as WifiManager
     private var lock: WifiManager.MulticastLock? = null

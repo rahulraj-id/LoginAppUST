@@ -14,6 +14,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Singleton
 
 @Module
@@ -27,7 +28,7 @@ abstract class BindingsModule {
 @InstallIn(SingletonComponent::class)
 object ProvidersModule {
     @Provides @Singleton fun provideHttpClient(): HttpClient = HttpClient()
-    @Provides @Singleton fun providePrefs(context: Context): Prefs = Prefs(context)
-    @Provides @Singleton fun provideDb(context: Context): DeviceDbHelper = DeviceDbHelper(context)
-    @Provides @Singleton fun provideNetworkUtil(context: Context, client: HttpClient): NetworkUtil = NetworkUtil(context, client)
+    @Provides @Singleton fun providePrefs(@ApplicationContext context: Context): Prefs = Prefs(context)
+    @Provides @Singleton fun provideDb(@ApplicationContext context: Context): DeviceDbHelper = DeviceDbHelper(context)
+    @Provides @Singleton fun provideNetworkUtil(@ApplicationContext context: Context, client: HttpClient): NetworkUtil = NetworkUtil(context, client)
 }
