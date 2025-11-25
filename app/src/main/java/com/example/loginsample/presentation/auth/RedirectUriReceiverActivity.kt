@@ -1,10 +1,10 @@
 package com.example.loginsample.presentation.auth
 
-import android.app.Activity
+import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.os.Bundle
 
-class RedirectUriReceiverActivity : Activity() {
+class RedirectUriReceiverActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val i = Intent(this, LoginActivity::class.java)

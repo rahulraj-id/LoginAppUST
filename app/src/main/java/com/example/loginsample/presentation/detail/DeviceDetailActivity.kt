@@ -1,6 +1,6 @@
 package com.example.loginsample.presentation.detail
 
-import android.app.Activity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import androidx.lifecycle.ViewModel
@@ -8,7 +8,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.loginsample.R
 import com.example.loginsample.data.network.HttpClient
 
-class DeviceDetailActivity : Activity() {
+class DeviceDetailActivity : AppCompatActivity() {
     private lateinit var vm: DeviceDetailViewModel
     private lateinit var txtPublic: TextView
     private lateinit var txtDetails: TextView

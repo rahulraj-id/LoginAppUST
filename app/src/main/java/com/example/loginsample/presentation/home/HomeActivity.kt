@@ -1,6 +1,6 @@
 package com.example.loginsample.presentation.home
 
-import android.app.Activity
+import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -14,7 +14,7 @@ import com.example.loginsample.data.repository.DeviceRepository
 import com.example.loginsample.domain.model.Device
 import com.example.loginsample.presentation.detail.DeviceDetailActivity
 
-class HomeActivity : Activity() {
+class HomeActivity : AppCompatActivity() {
     private lateinit var vm: HomeViewModel
     private lateinit var adapter: DeviceAdapter
     private lateinit var recycler: RecyclerView

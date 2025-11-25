@@ -1,6 +1,6 @@
 package com.example.loginsample.presentation.auth
 
-import android.app.Activity
+import androidx.appcompat.app.AppCompatActivity
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -12,7 +12,7 @@ import com.example.loginsample.data.repository.AuthRepository
 import com.example.loginsample.data.oauth.OAuthManager
 import com.example.loginsample.presentation.home.HomeActivity
 
-class LoginActivity : Activity() {
+class LoginActivity : AppCompatActivity() {
     private lateinit var vm: LoginViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
